@@ -4,6 +4,7 @@ import { Phone, User, Mail, Send, MapPin, Briefcase, ExternalLink } from 'lucide
 const Contact: React.FC = () => {
   const targetEmail = "dikshaagwan108@gmail.com";
 
+  
   return (
     <section id="contact" className="py-24 bg-brand-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
