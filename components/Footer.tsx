@@ -23,8 +23,8 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-4 text-brand-200">
               <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="#vision" className="hover:text-white transition-colors">Our Vision</a></li>
-              <li><a href="#mission" className="hover:text-white transition-colors">Our Mission</a></li>
+              <li><a href="#specialized-solutions" className="hover:text-white transition-colors">Our Approach</a></li>
+              <li><a href="#mission" className="hover:text-white transition-colors">Programs</a></li>
               <li><a href="#contact" className="hover:text-white transition-colors">Book a Demo</a></li>
             </ul>
           </div>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-brand-200">
               <li className="flex items-start gap-2">
                 <User size={16} className="mt-1 shrink-0" />
-                <span>Contact: Ms. Diksha Agwan</span>
+                <span>Diksha Agwan</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-1 shrink-0" />
@@ -42,11 +42,11 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="shrink-0" />
-                <a href="tel:+919527981484" className="hover:text-white transition-colors">+91-9527981484</a>
+                <a href="tel:+917558709730" className="hover:text-white transition-colors">+91-7558709730</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="shrink-0" />
-                <a href="mailto:dikshaagwan108@gmail.com" className="hover:text-white transition-colors break-all">dikshaagwan108@gmail.com</a>
+                <a href="mailto:diksha.agwan@dyogawellness.com" className="hover:text-white transition-colors break-all">diksha.agwan@dyogawellness.com</a>
               </li>
             </ul>
           </div>

@@ -1,18 +1,31 @@
 import React from 'react';
-import { Phone, User, Mail, Send, MapPin, Briefcase, ExternalLink } from 'lucide-react';
+import { Phone, User, Mail, ArrowRight, MapPin, Briefcase, ExternalLink } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Contact: React.FC = () => {
-  const targetEmail = "dikshaagwan108@gmail.com";
+  const targetEmail = "diksha.agwan@dyogawellness.com";
+  const headingAnim = useScrollAnimation({ threshold: 0.2 });
+  const cardAnim = useScrollAnimation({ threshold: 0.1 });
 
   return (
     <section id="contact" className="py-24 bg-brand-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div
+          ref={headingAnim.ref}
+          className={`text-center mb-12 fade-in ${headingAnim.isVisible ? 'visible' : ''}`}
+        >
           <span className="text-brand-600 font-semibold tracking-wider text-sm uppercase">Get in Touch</span>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mt-2">Start Your Wellness Journey</h2>
+          <p className="text-lg text-gray-600 leading-relaxed mt-4 max-w-3xl mx-auto">
+            Whether you're looking to reduce workplace stress, boost team morale, or create a healthier office culture, we're here to help.
+            Reach out today to discuss customized wellness solutions for your organization.
+          </p>
         </div>
 
-        <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+        <div
+          ref={cardAnim.ref}
+          className={`max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden scale-in ${cardAnim.isVisible ? 'visible' : ''}`}
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Contact Info Side */}
             <div className="bg-brand-600 p-10 text-white flex flex-col justify-between relative overflow-hidden">
@@ -27,6 +40,23 @@ const Contact: React.FC = () => {
                 </p>
               </div>
 
+              {/* Professional Credentials */}
+              <div className="relative z-10 mb-8 pb-8 border-b border-white/20">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                    <p className="text-3xl font-bold font-serif">11+</p>
+                    <p className="text-sm text-brand-100 mt-1">Years in IT</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                    <p className="text-3xl font-bold font-serif">7+</p>
+                    <p className="text-sm text-brand-100 mt-1">Years in Wellness</p>
+                  </div>
+                </div>
+                <p className="text-center text-sm text-brand-100 mt-4 italic">
+                  Certified Yoga & Wellness Professional
+                </p>
+              </div>
+
               <div className="space-y-6 relative z-10">
                 <div className="flex items-start gap-5">
                   <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm shrink-0 mt-1">
@@ -34,7 +64,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs text-brand-200 uppercase tracking-wider font-bold mb-1">Contact</p>
-                    <p className="font-serif text-xl font-medium tracking-wide">Ms. Diksha Agwan</p>
+                    <p className="font-serif text-xl font-medium tracking-wide">Diksha Agwan</p>
                   </div>
                 </div>
 
@@ -64,7 +94,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs text-brand-200 uppercase tracking-wider font-bold mb-1">Phone Number</p>
-                    <a href="tel:+919527981484" className="font-serif text-lg font-medium tracking-wide hover:text-brand-100 transition-colors">+91-9527981484</a>
+                    <a href="tel:+917558709730" className="font-serif text-lg font-medium tracking-wide hover:text-brand-100 transition-colors">+91-7558709730</a>
                   </div>
                 </div>
 
@@ -143,23 +173,9 @@ const Contact: React.FC = () => {
                     type="submit"
                     className="w-full bg-brand-800 text-white font-semibold py-3.5 rounded-xl hover:bg-brand-900 transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-200"
                   >
-                    Send Message
-                    <Send size={18} />
+                    Submit
+                    <ArrowRight size={18} />
                   </button>
-
-                  <div className="relative flex py-2 items-center">
-                    <div className="flex-grow border-t border-gray-200"></div>
-                    <span className="flex-shrink-0 mx-4 text-gray-400 text-xs uppercase font-semibold">Or</span>
-                    <div className="flex-grow border-t border-gray-200"></div>
-                  </div>
-
-                  <a
-                    href={`mailto:${targetEmail}?subject=Inquiry from D'YOGA Website`}
-                    className="w-full bg-white border-2 border-brand-100 text-brand-700 font-semibold py-3.5 rounded-xl hover:bg-brand-50 transition-all flex items-center justify-center gap-2"
-                  >
-                    Email Directly
-                    <Mail size={18} />
-                  </a>
                 </div>
               </form>
             </div>

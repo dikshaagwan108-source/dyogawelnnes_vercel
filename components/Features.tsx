@@ -1,5 +1,6 @@
 import React from 'react';
 import { Armchair, Coffee, Users, Heart } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const features = [
   {
@@ -25,19 +26,25 @@ const features = [
 ];
 
 const Features: React.FC = () => {
+  const headingAnim = useScrollAnimation({ threshold: 0.2 });
+  const featuresAnim = useScrollAnimation({ threshold: 0.1 });
+
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div
+          ref={headingAnim.ref}
+          className={`text-center mb-16 fade-in ${headingAnim.isVisible ? 'visible' : ''}`}
+        >
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
-            Wellness for the Modern Workplace
+            Our Sessions Focus
           </h2>
-          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            We don't just teach yoga; we engineer mindfulness for the corporate ecosystem.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          ref={featuresAnim.ref}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children ${featuresAnim.isVisible ? 'visible' : ''}`}
+        >
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center p-6 rounded-2xl hover:bg-gray-50 transition-colors duration-300">
               <div className="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mb-4">
