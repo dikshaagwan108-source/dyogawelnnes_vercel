@@ -2,7 +2,7 @@ import React from 'react';
 import { Phone, User, Mail, Send, MapPin, Briefcase, ExternalLink } from 'lucide-react';
 
 const Contact: React.FC = () => {
-  const targetEmail = "mangesh.gulhane21@gmail.com";
+  const targetEmail = "dikshaagwan108@gmail.com";
 
   return (
     <section id="contact" className="py-24 bg-brand-50">
