@@ -2,7 +2,7 @@ import React from 'react';
 import { Phone, User, Mail, Send, MapPin, Briefcase, ExternalLink } from 'lucide-react';
 
 const Contact: React.FC = () => {
-  const targetEmail = "mangesh.gulhane21@gmail.com";
+  const targetEmail = "dikshaagwan108@gmail.com";
 
   return (
     <section id="contact" className="py-24 bg-brand-50">
@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
                   Ready to bring mindfulness to your workplace? Reach out to us directly to discuss a plan tailored for your team.
                 </p>
               </div>
-              
+
               <div className="space-y-6 relative z-10">
                 <div className="flex items-start gap-5">
                   <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm shrink-0 mt-1">
@@ -44,11 +44,11 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs text-brand-200 uppercase tracking-wider font-bold mb-1">Designation</p>
-                    <p className="font-medium tracking-wide text-brand-50">Corporate Yoga Instructor <br/>& Wellness Strategist</p>
+                    <p className="font-medium tracking-wide text-brand-50">Corporate Yoga Instructor <br />& Wellness Strategist</p>
                   </div>
                 </div>
 
-                 <div className="flex items-start gap-5">
+                <div className="flex items-start gap-5">
                   <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm shrink-0 mt-1">
                     <MapPin size={20} />
                   </div>
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
             {/* Form Side */}
             <div className="p-10 flex flex-col justify-center bg-white relative">
               <h4 className="text-xl font-serif font-bold text-gray-900 mb-6">Send us a Message</h4>
-              
+
               <div className="bg-brand-50 border border-brand-100 rounded-xl p-4 mb-6 text-sm text-brand-800">
                 <p className="font-semibold flex items-center gap-2">
                   <ExternalLink size={14} />
@@ -94,8 +94,8 @@ const Contact: React.FC = () => {
                 </p>
               </div>
 
-              <form 
-                action={`https://formsubmit.co/${targetEmail}`} 
+              <form
+                action={`https://formsubmit.co/${targetEmail}`}
                 method="POST"
                 className="space-y-5"
               >
@@ -103,43 +103,43 @@ const Contact: React.FC = () => {
                 <input type="hidden" name="_subject" value="New D'YOGA Website Inquiry" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
-                
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-bold text-gray-800 mb-1.5">Your Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 font-medium focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder-gray-500" 
-                    placeholder="John Doe" 
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 font-medium focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder-gray-500"
+                    placeholder="John Doe"
                   />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-bold text-gray-800 mb-1.5">Email Address</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 font-medium focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder-gray-500" 
-                    placeholder="john@company.com" 
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 font-medium focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder-gray-500"
+                    placeholder="john@company.com"
                   />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-bold text-gray-800 mb-1.5">Message</label>
-                  <textarea 
+                  <textarea
                     id="message"
                     name="message"
-                    rows={4} 
+                    rows={4}
                     required
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 font-medium focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all resize-none placeholder-gray-500" 
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 font-medium focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all resize-none placeholder-gray-500"
                     placeholder="How can D'YOGA help your team?"
                   ></textarea>
                 </div>
-                
+
                 <div className="grid gap-4">
-                  <button 
+                  <button
                     type="submit"
                     className="w-full bg-brand-800 text-white font-semibold py-3.5 rounded-xl hover:bg-brand-900 transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-200"
                   >
@@ -153,7 +153,7 @@ const Contact: React.FC = () => {
                     <div className="flex-grow border-t border-gray-200"></div>
                   </div>
 
-                  <a 
+                  <a
                     href={`mailto:${targetEmail}?subject=Inquiry from D'YOGA Website`}
                     className="w-full bg-white border-2 border-brand-100 text-brand-700 font-semibold py-3.5 rounded-xl hover:bg-brand-50 transition-all flex items-center justify-center gap-2"
                   >

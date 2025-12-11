@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="bg-brand-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          
+
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-serif font-bold mb-4">D'YOGA</h3>
             <p className="text-brand-200 max-w-sm mb-6">
@@ -46,12 +46,12 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="shrink-0" />
-                <a href="mailto:mangesh.gulhane21@gmail.com" className="hover:text-white transition-colors break-all">mangesh.gulhane21@gmail.com</a>
+                <a href="mailto:dikshaagwan108@gmail.com" className="hover:text-white transition-colors break-all">dikshaagwan108@gmail.com</a>
               </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-brand-800 mt-12 pt-8 text-center text-brand-300 text-sm">
           © {new Date().getFullYear()} D'YOGA. All rights reserved.
         </div>
