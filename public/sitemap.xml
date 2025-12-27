@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
+  <url>
+    <loc>https://dyogawellness.com/</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://dyogawellness.com/dyoga-logo.png</image:loc>
+      <image:title>D'YOGA Wellness Logo</image:title>
+      <image:caption>D'YOGA Corporate Wellness and Employee Yoga Programs</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Our Approach / Mission Section -->
+  <url>
+    <loc>https://dyogawellness.com/#mission</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Specialized Solutions Section -->
+  <url>
+    <loc>https://dyogawellness.com/#specialized-solutions</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Benefits Section -->
+  <url>
+    <loc>https://dyogawellness.com/#benefits</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- About Trainer Section -->
+  <url>
+    <loc>https://dyogawellness.com/#about</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Testimonials Section -->
+  <url>
+    <loc>https://dyogawellness.com/#testimonials</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Section -->
+  <url>
+    <loc>https://dyogawellness.com/#blog</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://dyogawellness.com/#contact</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Program Options Section -->
+  <url>
+    <loc>https://dyogawellness.com/#programs</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
