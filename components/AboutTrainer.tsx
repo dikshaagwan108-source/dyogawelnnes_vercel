@@ -36,7 +36,7 @@ const AboutTrainer: React.FC = () => {
           >
 
             <p>
-              With <strong className="text-brand-800">8+ years of specialized experience</strong> in corporate wellness, Diksha designs and delivers evidence-based yoga programs specifically tailored for the modern workplace. Her expertise lies in creating practical, time-efficient sessions that address the unique physical and mental challenges faced by today's professionals.
+              With <strong className="text-brand-800">7+ years of specialized experience</strong> in wellness and <strong className="text-brand-800">11+ years of IT experience</strong>, Diksha designs and delivers evidence-based yoga programs specifically tailored for the modern workplace. Her expertise lies in creating practical, time-efficient sessions that address the unique physical and mental challenges faced by today's professionals.
             </p>
 
             <p>
@@ -123,7 +123,7 @@ const AboutTrainer: React.FC = () => {
               <div className="absolute inset-0 bg-brand-900/10 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
               {/* Updated to a high quality, reliable professional yoga image */}
               <img
-                src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                src="/diksha-professional-v2.png"
                 alt="Professional Yoga Instructor in Pose"
                 className="w-full h-full object-cover"
               />

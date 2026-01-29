@@ -48,12 +48,6 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg border border-white/20">
-                  <p className="text-sm font-medium text-brand-800">"D'YOGA changed our office culture completely."</p>
-                  <p className="text-xs text-gray-500 mt-1">— HR Director, TechCorp</p>
-                </div>
-              </div>
             </div>
           </div>
 

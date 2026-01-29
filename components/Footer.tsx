@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin, Twitter, Mail, Phone, User, MapPin } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Phone, User, MapPin, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -13,9 +13,9 @@ const Footer: React.FC = () => {
               Transforming corporate lives one breath at a time. Join the movement towards a healthier, happier workforce.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Twitter size={20} /></a>
+              <a href="https://www.instagram.com/dyoga.diksha?igsh=MWc4eHg1NWFtaXJjdA==" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Instagram size={20} /></a>
+              <a href="https://www.linkedin.com/in/diksha-a-6a668b88?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Linkedin size={20} /></a>
+              <a href="https://youtube.com/@dyoga-getfit?si=B3FQQx1z1vN97_oP" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Youtube size={20} /></a>
             </div>
           </div>
 
