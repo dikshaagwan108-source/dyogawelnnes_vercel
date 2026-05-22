@@ -1,46 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>D'YOGA | Corporate Wellness Redefined</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                50: '#f4f9f9',
-                100: '#e0f0f0',
-                200: '#c0dfe0',
-                300: '#94c5c7',
-                400: '#64a3a6',
-                500: '#468689',
-                600: '#386c70',
-                700: '#31585b',
-                800: '#2c494c',
-                900: '#273e40',
-              }
-            },
-            fontFamily: {
-              sans: ['Plus Jakarta Sans', 'sans-serif'],
-              serif: ['Playfair Display', 'serif'],
-            }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#468689" />
+    <meta name="msapplication-TileColor" content="#468689" />
+    <meta name="msapplication-navbutton-color" content="#468689" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#468689" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/dyoga-logo.png" />
+    <link rel="apple-touch-icon" href="/dyoga-logo.png" />
+    
+    <!-- Google Site Verification (Replace with actual verification code) -->
+    <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> -->
+    
+    
+    <!-- Primary Meta Tags -->
+    <title>D'YOGA | Corporate Wellness & Employee Yoga Programs in Pune</title>
+    <meta name="title" content="D'YOGA | Corporate Wellness & Employee Yoga Programs in Pune" />
+    <meta name="description" content="Transform your workplace with D'YOGA's corporate wellness solutions. Expert yoga instructor offering customized employee wellness programs, stress management, and team building in Pune. 11+ years IT experience, 7+ years wellness expertise." />
+    <meta name="keywords" content="corporate yoga, employee wellness, workplace wellness, yoga for employees, corporate wellness programs, stress management, team building, Pune yoga instructor, office yoga, corporate health, D'YOGA, Diksha Agwan" />
+    <meta name="author" content="Diksha Agwan - D'YOGA Wellness" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://dyogawellness.com/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dyogawellness.com/" />
+    <meta property="og:title" content="D'YOGA | Corporate Wellness & Employee Yoga Programs" />
+    <meta property="og:description" content="Transform your workplace with expert corporate wellness solutions. Customized yoga programs for employee health and productivity." />
+    <meta property="og:image" content="https://dyogawellness.com/dyoga-logo.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://dyogawellness.com/" />
+    <meta property="twitter:title" content="D'YOGA | Corporate Wellness & Employee Yoga Programs" />
+    <meta property="twitter:description" content="Transform your workplace with expert corporate wellness solutions. Customized yoga programs for employee health and productivity." />
+    <meta property="twitter:image" content="https://dyogawellness.com/dyoga-logo.png" />
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="IN-MH" />
+    <meta name="geo.placename" content="Pune" />
+    <meta name="geo.position" content="18.5204;73.8567" />
+    <meta name="ICBM" content="18.5204, 73.8567" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="rating" content="General" />
+    <meta name="distribution" content="Global" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="language" content="English" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="target" content="all" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="classification" content="Business, Health, Wellness, Yoga" />
+    <meta name="subject" content="Corporate Wellness, Employee Yoga Programs, Workplace Health" />
+    <meta name="copyright" content="D'YOGA Wellness" />
+    
+    <!-- Structured Data - LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://dyogawellness.com/#business",
+      "name": "D'YOGA Wellness",
+      "image": "https://dyogawellness.com/dyoga-logo.png",
+      "logo": "https://dyogawellness.com/dyoga-logo.png",
+      "description": "Corporate wellness and employee yoga programs in Pune. Expert yoga instructor offering customized employee wellness programs, stress management, and team building.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Wakad",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411057",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      "telephone": "+91-7558709730",
+      "email": "diksha.agwan@dyogawellness.com",
+      "url": "https://dyogawellness.com",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Pune"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Diksha Agwan",
+        "jobTitle": "Founder & Corporate Wellness Expert"
+      },
+      "sameAs": [],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "50"
+      }
+    }
+    </script>
+    
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://dyogawellness.com/#organization",
+      "name": "D'YOGA Wellness",
+      "url": "https://dyogawellness.com",
+      "logo": "https://dyogawellness.com/dyoga-logo.png",
+      "description": "D'YOGA offers corporate wellness solutions and employee yoga programs in Pune, India.",
+      "foundingDate": "2017",
+      "founder": {
+        "@type": "Person",
+        "name": "Diksha Agwan"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-7558709730",
+        "contactType": "customer service",
+        "email": "diksha.agwan@dyogawellness.com",
+        "availableLanguage": ["English", "Hindi", "Marathi"]
+      }
+    }
+    </script>
+    
+    <!-- Structured Data - Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://dyogawellness.com/#service",
+      "name": "Corporate Yoga and Wellness Programs",
+      "description": "Customized corporate yoga and wellness programs for employee health, stress management, and team building.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "D'YOGA Wellness",
+        "url": "https://dyogawellness.com"
+      },
+      "serviceType": "Corporate Wellness",
+      "areaServed": {
+        "@type": "City",
+        "name": "Pune"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceRange": "$$"
+      }
+    }
+    </script>
+    
+    <!-- Structured Data - FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://dyogawellness.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is corporate yoga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Corporate yoga is a specialized wellness program designed for employees in the workplace. It includes yoga sessions, stress management techniques, and mindfulness practices tailored to the corporate environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can D'YOGA help my company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "D'YOGA provides customized corporate wellness programs that improve employee health, reduce stress, boost productivity, and enhance team morale. Our programs are designed for IT professionals and corporate employees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer online corporate yoga sessions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, D'YOGA offers both in-person and online corporate yoga sessions to accommodate remote and hybrid work environments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is D'YOGA located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "D'YOGA is based in Pune, Maharashtra, India. We serve corporate clients across Pune and also offer online sessions for companies worldwide."
           }
         }
-      }
+      ]
+    }
     </script>
-    <style>
-      body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        scroll-behavior: smooth;
+    
+    <!-- Structured Data - WebSite with SearchAction for Sitelinks -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://dyogawellness.com/#website",
+      "url": "https://dyogawellness.com",
+      "name": "D'YOGA Wellness",
+      "description": "Corporate Wellness & Employee Yoga Programs in Pune",
+      "publisher": {
+        "@type": "Organization",
+        "name": "D'YOGA Wellness"
       }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Playfair Display', serif;
-      }
-    </style>
+    }
+    </script>
+    
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dyogawellness.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Approach",
+          "item": "https://dyogawellness.com/#mission"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Specialized Solutions",
+          "item": "https://dyogawellness.com/#specialized-solutions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Contact",
+          "item": "https://dyogawellness.com/#contact"
+        }
+      ]
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <script type="importmap">
 {
@@ -54,8 +274,8 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-BF7IwiSV.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DZM6I5bl.css">
+  <script type="module" crossorigin src="/assets/index-CDGUPoMM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CQZ4MONM.css">
 </head>
   <body>
     <div id="root"></div>

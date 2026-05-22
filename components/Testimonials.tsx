@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Quote, Star, X } from 'lucide-react';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-interface Testimonial {
+export interface Testimonial {
     name: string;
     role: string;
     company: string;
@@ -11,7 +10,7 @@ interface Testimonial {
     image: string;
 }
 
-const testimonials: Testimonial[] = [
+const defaultTestimonials: Testimonial[] = [
     {
         name: "Komal",
         role: "IT Professional",
@@ -54,9 +53,19 @@ const testimonials: Testimonial[] = [
     }
 ];
 
-const Testimonials: React.FC = () => {
-    const headingAnim = useScrollAnimation({ threshold: 0.2 });
-    const testimonialsAnim = useScrollAnimation({ threshold: 0.1 });
+interface TestimonialsProps {
+    data?: Testimonial[];
+    title?: string;
+    subtitle?: string;
+    label?: string;
+}
+
+const Testimonials: React.FC<TestimonialsProps> = ({
+    data = defaultTestimonials,
+    title = "Client Testimonials",
+    subtitle = "Real experiences from professionals who have transformed their well-being through our corporate yoga programs.",
+    label = "Client Success Stories"
+}) => {
     const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
 
     const openTestimonial = (testimonial: Testimonial) => {
@@ -70,175 +79,174 @@ const Testimonials: React.FC = () => {
     };
 
     return (
-        <>
-            <section className="py-24 bg-gradient-to-br from-brand-50 to-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                    <div
-                        ref={headingAnim.ref}
-                        className={`text-center mb-16 fade-in ${headingAnim.isVisible ? 'visible' : ''}`}
-                    >
-                        <span className="text-brand-600 font-semibold tracking-wider text-sm uppercase">Client Success Stories</span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mt-2">
-                            Client Testimonials
-                        </h2>
-                        <p className="text-lg text-gray-600 leading-relaxed mt-4 max-w-3xl mx-auto">
-                            Real experiences from professionals who have transformed their well-being through our corporate yoga programs.
-                        </p>
-                    </div>
-
-                    <div
-                        ref={testimonialsAnim.ref}
-                        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children ${testimonialsAnim.isVisible ? 'visible' : ''}`}
-                    >
-                        {testimonials.map((testimonial, index) => (
-                            <div
-                                key={index}
-                                onClick={() => openTestimonial(testimonial)}
-                                className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-brand-200 cursor-pointer"
-                            >
-                                <div className="absolute top-6 right-6 text-brand-200 group-hover:text-brand-300 transition-colors">
-                                    <Quote size={40} className="opacity-50" />
-                                </div>
-
-                                <div className="flex gap-1 mb-4">
-                                    {[...Array(testimonial.rating)].map((_, i) => (
-                                        <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
-                                    ))}
-                                </div>
-
-                                <p className="text-gray-700 leading-relaxed mb-6 relative z-10 line-clamp-6">
-                                    "{testimonial.text}"
-                                </p>
-
-                                <button className="text-brand-600 text-sm font-semibold hover:text-brand-700 mb-4">
-                                    Read Full Review →
-                                </button>
-
-                                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                                    <img
-                                        src={testimonial.image}
-                                        alt={testimonial.name}
-                                        className="w-12 h-12 rounded-full ring-2 ring-brand-200"
-                                    />
-                                    <div>
-                                        <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                                        <p className="text-sm text-gray-600">{testimonial.role}</p>
-                                    </div>
-                                </div>
-
-                                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-400 to-brand-600 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="text-center p-6 bg-white rounded-xl shadow-md">
-                            <div className="text-4xl font-serif font-bold text-brand-600 mb-2">100+</div>
-                            <p className="text-gray-600">Happy Clients</p>
-                        </div>
-                        <div className="text-center p-6 bg-white rounded-xl shadow-md">
-                            <div className="text-4xl font-serif font-bold text-brand-600 mb-2">500+</div>
-                            <p className="text-gray-600">Sessions Conducted</p>
-                        </div>
-                        <div className="text-center p-6 bg-white rounded-xl shadow-md">
-                            <div className="text-4xl font-serif font-bold text-brand-600 mb-2">98%</div>
-                            <p className="text-gray-600">Satisfaction Rate</p>
-                        </div>
-                    </div>
-
+        <section style={{ padding: '6rem 0', backgroundColor: '#f4f9f9', borderTop: '1px solid #e0f0f0' }}>
+            <div className="container">
+                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                    <span style={{ color: 'var(--brand-primary)', fontWeight: 'bold', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '1px' }}>
+                        {label}
+                    </span>
+                    <h2 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', color: 'var(--text-main)', marginTop: '0.5rem', fontWeight: 'bold' }}>
+                        {title}
+                    </h2>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '1.125rem', maxWidth: '800px', margin: '1rem auto 0' }}>
+                        {subtitle}
+                    </p>
                 </div>
 
-                <style>{`
-          .line-clamp-6 {
-            display: -webkit-box;
-            -webkit-line-clamp: 6;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-          }
-        `}</style>
-            </section>
+                <div style={styles.grid}>
+                    {data.map((testimonial, index) => (
+                        <div 
+                            key={index} 
+                            style={styles.card} 
+                            className="card-hover"
+                            onClick={() => openTestimonial(testimonial)}
+                        >
+                            <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', color: '#e0f0f0' }}>
+                                <Quote size={40} />
+                            </div>
 
-            {selectedTestimonial && (
-                <div
-                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn"
-                    onClick={closeTestimonial}
-                >
-                    <div
-                        className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl animate-slideUp"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <div className="relative bg-gradient-to-r from-brand-600 to-brand-700 p-8 text-white">
-                            <button
-                                onClick={closeTestimonial}
-                                className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/30 transition-all"
-                            >
-                                <X size={24} />
+                            <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1rem' }}>
+                                {[...Array(testimonial.rating)].map((_, i) => (
+                                    <Star key={i} size={16} fill="#f59e0b" color="#f59e0b" />
+                                ))}
+                            </div>
+
+                            <p style={{ ...styles.clampText, color: 'var(--text-main)', marginBottom: '1.5rem', position: 'relative', zIndex: 10 }}>
+                                "{testimonial.text}"
+                            </p>
+
+                            <button style={{ color: 'var(--brand-primary)', fontWeight: 'bold', background: 'none', border: 'none', cursor: 'pointer', marginBottom: '1.5rem', padding: 0 }}>
+                                Read Full Review →
                             </button>
 
-                            <div className="flex items-center gap-4">
-                                <img
-                                    src={selectedTestimonial.image}
-                                    alt={selectedTestimonial.name}
-                                    className="w-20 h-20 rounded-full ring-4 ring-white/30"
-                                />
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid #e0f0f0', paddingTop: '1.5rem' }}>
+                                <img src={testimonial.image} alt={testimonial.name} style={{ width: '48px', height: '48px', borderRadius: '50%', border: '2px solid #e0f0f0' }} />
                                 <div>
-                                    <h3 className="text-2xl font-serif font-bold">{selectedTestimonial.name}</h3>
-                                    <p className="text-brand-100">{selectedTestimonial.role}</p>
-                                    <div className="flex gap-1 mt-2">
+                                    <h4 style={{ fontWeight: 'bold', color: 'var(--text-main)' }}>{testimonial.name}</h4>
+                                    <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>
+                                        {testimonial.role}{testimonial.company ? ` at ${testimonial.company}` : ''}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+
+            </div>
+
+            {selectedTestimonial && (
+                <div style={styles.modalOverlay} onClick={closeTestimonial}>
+                    <div style={styles.modalContent} onClick={e => e.stopPropagation()}>
+                        <div style={{ backgroundColor: 'var(--brand-secondary)', padding: '2rem', color: '#fff', position: 'relative' }}>
+                            <button onClick={closeTestimonial} style={styles.closeBtn}>
+                                <X size={24} />
+                            </button>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                <img src={selectedTestimonial.image} alt={selectedTestimonial.name} style={{ width: '80px', height: '80px', borderRadius: '50%', border: '4px solid rgba(255,255,255,0.3)' }} />
+                                <div>
+                                    <h3 style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', fontWeight: 'bold', color: '#FFFFFF' }}>{selectedTestimonial.name}</h3>
+                                    <p style={{ color: '#FFFFFF' }}>{selectedTestimonial.role}</p>
+                                    <div style={{ display: 'flex', gap: '0.25rem', marginTop: '0.5rem' }}>
                                         {[...Array(selectedTestimonial.rating)].map((_, i) => (
-                                            <Star key={i} size={16} className="fill-yellow-300 text-yellow-300" />
+                                            <Star key={i} size={16} fill="#fde047" color="#fde047" />
                                         ))}
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="p-8">
-                            <div className="relative">
-                                <Quote size={48} className="absolute -top-4 -left-2 text-brand-200 opacity-50" />
-                                <p className="text-gray-700 text-lg leading-relaxed pl-8">
-                                    "{selectedTestimonial.text}"
-                                </p>
-                            </div>
-
-                            <div className="mt-8 pt-6 border-t border-gray-200 text-center">
-                                <button
-                                    onClick={closeTestimonial}
-                                    className="bg-brand-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-brand-700 transition-all"
-                                >
-                                    Close
-                                </button>
+                        <div style={{ padding: '2rem', position: 'relative' }}>
+                            <Quote size={48} style={{ position: 'absolute', top: '1rem', left: '1rem', color: '#e0f0f0', opacity: 0.5 }} />
+                            <p style={{ fontSize: '1.125rem', color: 'var(--text-main)', lineHeight: 1.8, paddingLeft: '2rem', position: 'relative', zIndex: 10 }}>
+                                "{selectedTestimonial.text}"
+                            </p>
+                            <div style={{ textAlign: 'center', marginTop: '2rem', borderTop: '1px solid #e0f0f0', paddingTop: '1.5rem' }}>
+                                <button className="btn btn-primary" onClick={closeTestimonial}>Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             )}
-
-            <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        @keyframes slideUp {
-          from { 
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to { 
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out;
-        }
-        .animate-slideUp {
-          animation: slideUp 0.4s ease-out;
-        }
-      `}</style>
-        </>
+        </section>
     );
+};
+
+const styles = {
+    grid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        gap: '2rem',
+    },
+    card: {
+        backgroundColor: '#fff',
+        padding: '2rem',
+        borderRadius: '1rem',
+        boxShadow: 'var(--shadow-md)',
+        border: '1px solid #e0f0f0',
+        position: 'relative' as const,
+        cursor: 'pointer',
+    },
+    clampText: {
+        display: '-webkit-box',
+        WebkitLineClamp: 6,
+        WebkitBoxOrient: 'vertical' as const,
+        overflow: 'hidden',
+        lineHeight: 1.6,
+    },
+    statCard: {
+        backgroundColor: '#fff',
+        padding: '2rem',
+        borderRadius: '1rem',
+        boxShadow: 'var(--shadow-md)',
+        textAlign: 'center' as const,
+    },
+    statNum: {
+        fontSize: '2.5rem',
+        fontFamily: 'var(--font-serif)',
+        fontWeight: 'bold',
+        color: 'var(--brand-primary)',
+        marginBottom: '0.5rem',
+    },
+    modalOverlay: {
+        position: 'fixed' as const,
+        top: 0, left: 0, right: 0, bottom: 0,
+        backgroundColor: 'rgba(0,0,0,0.6)',
+        backdropFilter: 'blur(4px)',
+        zIndex: 10000,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '90px 1rem 1rem 1rem', /* Added top padding to prevent header overlap */
+        animation: 'fadeIn 0.3s ease-out',
+    },
+    modalContent: {
+        backgroundColor: '#fff',
+        borderRadius: '1.5rem',
+        width: '95%',
+        maxWidth: '800px',
+        maxHeight: 'calc(100vh - 110px)', /* Adjusted max height to account for padding */
+        overflowY: 'auto' as const,
+        position: 'relative' as const,
+        boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)',
+        animation: 'slideUp 0.4s ease-out',
+        margin: '0 auto',
+    },
+    closeBtn: {
+        position: 'absolute' as const,
+        top: '1rem',
+        right: '1rem',
+        background: 'rgba(255,255,255,0.2)',
+        border: 'none',
+        borderRadius: '50%',
+        width: '40px',
+        height: '40px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#fff',
+        cursor: 'pointer',
+    }
 };
 
 export default Testimonials;

@@ -1,61 +1,107 @@
-import React from 'react';
-import { SiteContent } from '../types';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-interface HeaderProps {
-  content: SiteContent;
-}
+const Header: React.FC = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-const Header: React.FC<HeaderProps> = ({ content }) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: 'Corporate Wellness', path: '/corporate-wellness' },
+    { name: 'Health Program', path: '/health-program' },
+    { name: 'Morning Yoga', path: '/morning-yoga' },
+    { name: 'About', path: '/about' },
+    { name: 'Blogs', path: '/blog' },
+  ];
+
   return (
-    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-
-          {/* Logo Section */}
-          <div className="relative group">
-            <div className="flex items-center gap-3">
-              {/* D'YOGA Logo Image */}
-              <img
-                src="/dyoga-logo.png"
-                alt="D'YOGA Logo"
-                className="h-14 w-auto object-contain"
-              />
-
-              {/* Text Section */}
-              {content.logoImage ? (
-                <div className="flex flex-col">
-                  <span className="text-2xl font-serif font-bold text-brand-800 tracking-tight leading-none">
-                    D'YOGA
-                  </span>
-                  <span className="text-[10px] md:text-xs text-brand-600 font-medium tracking-widest uppercase mt-0.5">
-                    Employee wellness solutions
-                  </span>
-                </div>
-              ) : (
-                <div className="flex flex-col">
-                  <span className="text-2xl font-serif font-bold text-brand-800 tracking-tight leading-none">
-                    {content.logoText}
-                  </span>
-                  <span className="text-[10px] md:text-xs text-brand-600 font-medium tracking-widest uppercase mt-0.5">
-                    Employee wellness solutions
-                  </span>
-                </div>
-              )}
-            </div>
+    <header className={`header ${scrolled ? 'glass' : ''}`} style={styles.header}>
+      <div className="container flex justify-between items-center" style={styles.container}>
+        <Link to="/" className="logo-container" style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none' }}>
+          <img src="/dyoga-logo.png" alt="D'YOGA Logo" style={{ height: '50px', width: 'auto' }} />
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <span style={{ ...styles.logo, color: '#2c494c', lineHeight: 1 }}>D'YOGA</span>
+            <span style={{ fontSize: '1.05rem', color: '#386c70', fontWeight: 600, letterSpacing: '0.5px', marginTop: '2px' }}>Corporate wellness solutions</span>
           </div>
+        </Link>
+        
+        <nav className={`nav ${mobileMenuOpen ? 'nav-open' : ''}`} style={styles.navDesktop}>
+          {navLinks.map((link) => (
+            <Link 
+              key={link.path} 
+              to={link.path} 
+              className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+              style={{
+                ...styles.navLink,
+                color: location.pathname === link.path ? 'var(--brand-primary)' : 'var(--text-main)'
+              }}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
 
-          {/* Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-gray-600 hover:text-brand-600 font-medium transition-colors">Home</a>
-            <a href="#specialized-solutions" className="text-gray-600 hover:text-brand-600 font-medium transition-colors">Our Approach</a>
-            <a href="#mission" className="text-gray-600 hover:text-brand-600 font-medium transition-colors">Programs</a>
-            <a href="#blog" className="text-gray-600 hover:text-brand-600 font-medium transition-colors">Blog</a>
-            <a href="#contact" className="text-gray-600 hover:text-brand-600 font-medium transition-colors">Contact</a>
-          </nav>
-        </div>
+        <button 
+          className="mobile-menu-btn" 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          style={styles.mobileBtn}
+        >
+          {mobileMenuOpen ? '✕' : '☰'}
+        </button>
       </div>
     </header>
   );
+};
+
+const styles = {
+  header: {
+    position: 'fixed' as const,
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 1000,
+    transition: 'all 0.3s ease',
+    padding: '1rem 0',
+  },
+  container: {
+    padding: '0 2rem',
+  },
+  logo: {
+    fontFamily: 'var(--font-serif)',
+    fontSize: '2rem',
+    fontWeight: 700,
+    letterSpacing: '2px',
+  },
+  navDesktop: {
+    display: 'flex',
+    gap: '2rem',
+    alignItems: 'center',
+  },
+  navLink: {
+    fontFamily: 'var(--font-sans)',
+    fontWeight: 500,
+    textTransform: 'uppercase' as const,
+    fontSize: '0.9rem',
+    letterSpacing: '1px',
+    transition: 'color 0.3s ease',
+  },
+  mobileBtn: {
+    display: 'none', // We'll assume desktop first, use media queries for mobile if needed, but inline styles don't support media queries.
+    // For a real production app, we'd move this to CSS. I'll add some base classes to index.css if needed.
+    background: 'none',
+    border: 'none',
+    fontSize: '1.5rem',
+    cursor: 'pointer',
+    color: 'var(--text-main)',
+  }
 };
 
 export default Header;

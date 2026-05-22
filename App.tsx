@@ -1,47 +1,40 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Benefits from './components/Benefits';
-import ProgramOptions from './components/ProgramOptions';
-import Testimonials from './components/Testimonials';
-import AboutTrainer from './components/AboutTrainer';
-import Blog from './components/Blog';
 import Footer from './components/Footer';
-import Contact from './components/Contact';
-import { SiteContent } from './types';
+
+// Pages
+import Home from './pages/Home';
+import CorporateWellness from './pages/CorporateWellness';
+import HealthProgram from './pages/HealthProgram';
+import MorningYoga from './pages/MorningYoga';
+import About from './pages/About';
+import Blog from './components/Blog';
+import ScrollToTop from './components/ScrollToTop';
+import PaymentQR from './pages/PaymentQR';
 
 const App: React.FC = () => {
-  // --- State ---
-  // Content state is kept for potential future dynamic updates, but editing UI is removed.
-  const [content] = useState<SiteContent>({
-    logoText: "D'YOGA",
-    logoImage: null,
-    heroHeadline: "Elevating Employee Well-Being to Strengthen Your Organization",
-    heroSubheadline: "Empower your teams to feel better and work better. D'YOGA brings practical, corporate-friendly yoga programs that ease pain, cut stress, and uplift overall employee performance.",
-    visionTitle: "",
-    visionText: "",
-    missionTitle: "",
-    missionText: "",
-  });
-
   return (
-    <div className="min-h-screen bg-white">
-      <Header content={content} />
+    <Router>
+      <ScrollToTop />
+      <div className="app-container">
+        <Header />
+        
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/corporate-wellness" element={<CorporateWellness />} />
+            <Route path="/health-program" element={<HealthProgram />} />
+            <Route path="/morning-yoga" element={<MorningYoga />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/payment-qr" element={<PaymentQR />} />
+          </Routes>
+        </main>
 
-      <main>
-        <Hero content={content} />
-        <AboutTrainer />
-        <Features />
-        <Benefits />
-        <ProgramOptions />
-        <Testimonials />
-        <Blog />
-        <Contact />
-      </main>
-
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
