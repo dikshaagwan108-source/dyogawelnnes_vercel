@@ -40,8 +40,8 @@ const CorporateWellness: React.FC = () => {
         </div>
       </section>
 
-      <section className="section bg-card">
-        <div className="container grid md:grid-cols-2 gap-lg items-center">
+      <section className="bg-card" style={{ padding: '1rem 0 3rem' }}>
+        <div className="container grid md:grid-cols-2 gap-md" style={{ alignItems: 'center' }}>
           <div>
             <img 
               src="/corporate_wellness_team_1779372521227.png" 
@@ -78,8 +78,7 @@ const CorporateWellness: React.FC = () => {
 
 const styles = {
   hero: {
-    padding: '4rem 1rem 3rem',
-    borderBottom: '1px solid var(--border-color)',
+    padding: '4rem 1rem 1.5rem',
   },
   image: {
     borderRadius: 'var(--radius-lg)',

@@ -25,7 +25,7 @@ const Header: React.FC = () => {
   return (
     <header className={`header ${scrolled ? 'glass' : ''}`} style={styles.header}>
       <div className="container flex justify-between items-center" style={styles.container}>
-        <Link to="/" className="logo-container" style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none' }}>
+        <Link to="/" className="logo-container" style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none' }} onClick={() => setMobileMenuOpen(false)}>
           <img src="/dyoga-logo.png" alt="D'YOGA Logo" style={{ height: '50px', width: 'auto' }} />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span style={{ ...styles.logo, color: '#2c494c', lineHeight: 1 }}>D'YOGA</span>
@@ -43,6 +43,7 @@ const Header: React.FC = () => {
                 ...styles.navLink,
                 color: location.pathname === link.path ? 'var(--brand-primary)' : 'var(--text-main)'
               }}
+              onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
             </Link>
@@ -53,6 +54,7 @@ const Header: React.FC = () => {
           className="mobile-menu-btn" 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           style={styles.mobileBtn}
+          aria-label="Toggle menu"
         >
           {mobileMenuOpen ? '✕' : '☰'}
         </button>

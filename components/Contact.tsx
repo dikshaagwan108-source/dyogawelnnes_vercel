@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
                 <p style={styles.statLabel}>Years in IT</p>
               </div>
               <div style={styles.stat}>
-                <p style={styles.statNum}>7+</p>
+                <p style={styles.statNum}>8+</p>
                 <p style={styles.statLabel}>Years in Wellness</p>
               </div>
             </div>

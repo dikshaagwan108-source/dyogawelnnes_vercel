@@ -49,8 +49,16 @@ const HealthProgram: React.FC = () => {
         </div>
       </section>
 
-      <section className="section bg-card">
-        <div className="container grid md:grid-cols-2 gap-lg items-center">
+      <section className="bg-card" style={{ padding: '1rem 0 3rem' }}>
+        <div className="container grid md:grid-cols-2 gap-md" style={{ alignItems: 'center' }}>
+          <div>
+            <img 
+              src="/health_path_new_1779356869878.png" 
+              alt="Health Program" 
+              style={styles.image} 
+              className="card-hover"
+            />
+          </div>
           <div className="animate-slide-up delay-200">
             <h2 className="title-lg text-secondary" style={{ marginBottom: '1.5rem' }}>Transform Your Life</h2>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
@@ -63,14 +71,6 @@ const HealthProgram: React.FC = () => {
               <li>✓ Strength & Flexibility Training</li>
             </ul>
             <a href="/#contact" className="btn btn-primary" style={{ marginTop: '2rem', display: 'inline-block' }}>Join the Program</a>
-          </div>
-          <div>
-            <img 
-              src="/health_path_new_1779356869878.png" 
-              alt="Health Program" 
-              style={styles.image} 
-              className="card-hover"
-            />
           </div>
         </div>
       </section>
@@ -131,8 +131,7 @@ const HealthProgram: React.FC = () => {
 
 const styles = {
   hero: {
-    padding: '4rem 1rem 3rem',
-    borderBottom: '1px solid var(--border-color)',
+    padding: '4rem 1rem 1.5rem',
   },
   image: {
     borderRadius: 'var(--radius-lg)',

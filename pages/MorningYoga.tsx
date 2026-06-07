@@ -21,8 +21,8 @@ const MorningYoga: React.FC = () => {
         </div>
       </section>
 
-      <section className="section bg-card">
-        <div className="container grid md:grid-cols-2 gap-lg items-start">
+      <section className="bg-card" style={{ padding: '1rem 0 3rem' }}>
+        <div className="container grid md:grid-cols-2 gap-md" style={{ alignItems: 'start' }}>
           
           <div>
             <img 
@@ -103,8 +103,7 @@ const MorningYoga: React.FC = () => {
 
 const styles = {
   hero: {
-    padding: '4rem 1rem 3rem',
-    borderBottom: '1px solid var(--border-color)',
+    padding: '4rem 1rem 1.5rem',
   },
   image: {
     borderRadius: 'var(--radius-lg)',
