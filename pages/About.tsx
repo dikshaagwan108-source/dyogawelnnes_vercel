@@ -25,26 +25,43 @@ const About: React.FC = () => {
           <div className="animate-slide-up delay-200">
             <h3 className="title-md text-secondary" style={{ marginBottom: '1rem' }}>About D'YOGA</h3>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
-              D'YOGA was founded with a simple belief: lasting wellness begins by addressing the root cause, not just the symptoms.
+              D'YOGA was created to help people achieve lasting wellness by focusing on what's causing the problem, not just the problem itself.
             </p>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
               Built on over 11 years of firsthand corporate experience, we understand the realities of modern work stress, burnout, sedentary lifestyles, weight challenges, hormonal imbalances, and the struggle to prioritize health.
             </p>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
-              Our approach combines holistic health coaching, yoga expertise, and practical lifestyle transformation to help busy professionals achieve <strong>Mental Rejuvenation, Foundational Health, Hormonal Equilibrium, and Women's Wellbeing</strong>.
+              Our approach combines holistic health coaching, yoga expertise, and practical lifestyle transformation to help busy professionals achieve <strong>Mental Rejuvenation</strong>, <strong>Foundational Health</strong>, <strong>Hormonal Equilibrium</strong> and <strong>Women's Wellbeing</strong>.
             </p>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
-              At D'YOGA, we don't just promote wellness — we help people build sustainable habits that support healthier, happier, and more productive lives.
+              At D'YOGA, we don't just promote wellness, we help people build sustainable habits that support healthier, happier, and more productive lives.
             </p>
 
             <div style={{ marginTop: '2.5rem', padding: '2rem', borderRadius: '1rem', background: 'linear-gradient(135deg, #e0f0f0 0%, #f4f9f9 100%)', border: '1px solid var(--border-color)' }}>
-              <h3 className="title-md text-primary animate-slide-up" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>WHY D'YOGA?</h3>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+              <h3 className="title-md text-primary animate-slide-up" style={{ marginBottom: '2rem', textAlign: 'center' }}>WHY D'YOGA?</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 {[
-                  { icon: '🧠', text: 'Neuro-Reset for Focus & Resilience', delay: '0.1s' },
-                  { icon: '🧘', text: 'Desk-Based Yoga for Busy Professionals', delay: '0.2s' },
-                  { icon: '🦴', text: 'Posture Correction & Spine Mobility', delay: '0.3s' },
-                  { icon: '👁️', text: 'Eye-Ear Relaxation for Digital Fatigue', delay: '0.4s' },
+                  {
+                    icon: '🎯',
+                    title: 'Root-Cause Health Coaching',
+                    desc: 'Addressing the underlying drivers of stress, weight concerns, hormonal imbalances, and lifestyle-related health challenges.',
+                    accent: 'linear-gradient(135deg, #468689, #64a3a6)',
+                    delay: '0.1s',
+                  },
+                  {
+                    icon: '🧬',
+                    title: 'Integrated Mind-Body Expertise',
+                    desc: 'Combining yoga, neuroscience-backed practices, breathwork, and lifestyle interventions for lasting behavior change.',
+                    accent: 'linear-gradient(135deg, #31585b, #468689)',
+                    delay: '0.25s',
+                  },
+                  {
+                    icon: '💼',
+                    title: 'Corporate-Lived Perspective',
+                    desc: 'Designed by professionals who have experienced the realities of demanding corporate environments firsthand.',
+                    accent: 'linear-gradient(135deg, #2c494c, #386c70)',
+                    delay: '0.4s',
+                  },
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -52,24 +69,26 @@ const About: React.FC = () => {
                     style={{
                       animationDelay: item.delay,
                       display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.75rem',
-                      padding: '1rem',
+                      alignItems: 'flex-start',
+                      gap: '1rem',
+                      padding: '1.5rem',
                       backgroundColor: '#fff',
                       borderRadius: '0.75rem',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
+                      boxShadow: '0 4px 16px rgba(0,0,0,0.06)',
                       border: '1px solid #e0f0f0',
+                      borderLeft: '4px solid transparent',
+                      borderImage: item.accent + ' 1',
                       transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                     }}
                   >
-                    <span style={{ fontSize: '1.5rem', flexShrink: 0 }}>{item.icon}</span>
-                    <span style={{ fontWeight: 600, color: 'var(--text-main)', fontSize: '0.95rem' }}>{item.text}</span>
+                    <span style={{ fontSize: '2rem', flexShrink: 0, lineHeight: 1 }}>{item.icon}</span>
+                    <div>
+                      <h4 style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, color: 'var(--text-main)', fontSize: '1.1rem', marginBottom: '0.4rem' }}>{item.title}</h4>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>{item.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
-              <p className="text-muted animate-slide-up" style={{ animationDelay: '0.5s', textAlign: 'center', marginTop: '1.5rem', fontSize: '0.95rem', fontStyle: 'italic' }}>
-                Designed by professionals who understand corporate life, D'YOGA delivers practical wellness solutions that fit seamlessly into the modern workplace.
-              </p>
             </div>
             
             <div style={{ backgroundColor: '#273a3c', borderRadius: '1rem', padding: '2rem', marginTop: '2.5rem', boxShadow: '0 10px 25px -5px rgba(0,0,0,0.2)' }}>

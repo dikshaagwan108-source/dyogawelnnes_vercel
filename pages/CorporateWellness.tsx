@@ -66,6 +66,45 @@ const CorporateWellness: React.FC = () => {
         </div>
       </section>
 
+      <section className="bg-main" style={{ padding: '2rem 0 3rem' }}>
+        <div className="container">
+          <div style={{ padding: '2rem', borderRadius: '1rem', background: 'linear-gradient(135deg, #e0f0f0 0%, #f4f9f9 100%)', border: '1px solid var(--border-color)' }}>
+            <h3 className="title-md text-primary animate-slide-up" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>What We Offer</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+              {[
+                { icon: '🧠', text: 'Neuro-Reset for Focus & Resilience', delay: '0.1s' },
+                { icon: '🧘', text: 'Desk-Based Yoga for Busy Professionals', delay: '0.2s' },
+                { icon: '🦴', text: 'Posture Correction & Spine Mobility', delay: '0.3s' },
+                { icon: '👁️', text: 'Eye-Ear Relaxation for Digital Fatigue', delay: '0.4s' },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="animate-slide-up card-hover"
+                  style={{
+                    animationDelay: item.delay,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.75rem',
+                    padding: '1rem',
+                    backgroundColor: '#fff',
+                    borderRadius: '0.75rem',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
+                    border: '1px solid #e0f0f0',
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  }}
+                >
+                  <span style={{ fontSize: '1.5rem', flexShrink: 0 }}>{item.icon}</span>
+                  <span style={{ fontWeight: 600, color: 'var(--text-main)', fontSize: '0.95rem' }}>{item.text}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-muted animate-slide-up" style={{ animationDelay: '0.5s', textAlign: 'center', marginTop: '1.5rem', fontSize: '0.95rem', fontStyle: 'italic' }}>
+              Designed by professionals who understand corporate life, D'YOGA delivers practical wellness solutions that fit seamlessly into the modern workplace.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <Testimonials 
         data={corporateTestimonials}
         title="Corporate Success Stories"

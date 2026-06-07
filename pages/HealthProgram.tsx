@@ -1,6 +1,6 @@
 import React from 'react';
 import Testimonials, { Testimonial } from '../components/Testimonials';
-import { Scale, HeartPulse, Brain } from 'lucide-react';
+import { Brain, HeartPulse, Sparkles, Scale } from 'lucide-react';
 
 const healthTestimonials: Testimonial[] = [
     {
@@ -75,6 +75,42 @@ const HealthProgram: React.FC = () => {
         </div>
       </section>
 
+      <section className="bg-card" style={{ padding: '2rem 0 3rem' }}>
+        <div className="container">
+          <div style={{ padding: '2rem', borderRadius: '1rem', background: 'linear-gradient(135deg, #e0f0f0 0%, #f4f9f9 100%)', border: '1px solid var(--border-color)' }}>
+            <h3 className="title-md text-primary animate-slide-up" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>What We Offer</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+              {[
+                { icon: '🧠', text: 'Neuro-reset techniques to improve focus, energy, and resilience', delay: '0.1s' },
+                { icon: '🧘', text: 'Desk-based yoga movements requiring no special equipments', delay: '0.2s' },
+                { icon: '🦴', text: 'Posture correction and spine mobility practices', delay: '0.3s' },
+                { icon: '👁️', text: 'Ear-Eye relaxation techniques for mental fatigue', delay: '0.4s' },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="animate-slide-up card-hover"
+                  style={{
+                    animationDelay: item.delay,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.75rem',
+                    padding: '1rem',
+                    backgroundColor: '#fff',
+                    borderRadius: '0.75rem',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
+                    border: '1px solid #e0f0f0',
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  }}
+                >
+                  <span style={{ fontSize: '1.5rem', flexShrink: 0 }}>{item.icon}</span>
+                  <span style={{ fontWeight: 600, color: 'var(--text-main)', fontSize: '0.95rem' }}>{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Niche Expertise Section */}
       <section className="section bg-main" style={{ padding: '5rem 0', borderBottom: '1px solid var(--border-color)' }}>
         <div className="container">
@@ -85,14 +121,14 @@ const HealthProgram: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-lg">
+          <div className="grid md:grid-cols-2 gap-md">
             <div className="path-card card-hover glass animate-slide-up delay-100" style={{ padding: '2.5rem', textAlign: 'center', borderRadius: '1rem', border: '1px solid var(--border-color)' }}>
-              <div style={{ backgroundColor: 'var(--brand-accent)', width: '64px', height: '64px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: '#fff' }}>
-                <Scale size={32} />
+              <div style={{ backgroundColor: '#468689', width: '64px', height: '64px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: '#fff' }}>
+                <Brain size={32} />
               </div>
-              <h3 className="title-md text-primary" style={{ marginBottom: '1rem' }}>Weight Loss</h3>
+              <h3 className="title-md text-primary" style={{ marginBottom: '1rem' }}>Mental Rejuvenation</h3>
               <p className="text-muted">
-                Sustainable, realistic weight management through dynamic yoga flows and lifestyle adjustments, focusing on long-term health rather than fad diets.
+                Mindfulness practices, deep relaxation, and pranayama strategies to reduce anxiety, combat stress, and foster a peaceful, resilient mind.
               </p>
             </div>
 
@@ -100,19 +136,29 @@ const HealthProgram: React.FC = () => {
               <div style={{ backgroundColor: '#ec4899', width: '64px', height: '64px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: '#fff' }}>
                 <HeartPulse size={32} />
               </div>
-              <h3 className="title-md text-primary" style={{ marginBottom: '1rem' }}>PCOD & Hormonal Balance</h3>
+              <h3 className="title-md text-primary" style={{ marginBottom: '1rem' }}>Hormonal Equilibrium</h3>
               <p className="text-muted">
-                Specialized asanas and breathing techniques aimed at regulating the endocrine system, improving circulation, and managing symptoms of PCOD naturally.
+                Specialized asanas and breathing techniques aimed at regulating the endocrine system, improving circulation, and restoring hormonal balance naturally.
               </p>
             </div>
 
             <div className="path-card card-hover glass animate-slide-up delay-300" style={{ padding: '2.5rem', textAlign: 'center', borderRadius: '1rem', border: '1px solid var(--border-color)' }}>
               <div style={{ backgroundColor: '#3b82f6', width: '64px', height: '64px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: '#fff' }}>
-                <Brain size={32} />
+                <Sparkles size={32} />
               </div>
-              <h3 className="title-md text-primary" style={{ marginBottom: '1rem' }}>Mental Health</h3>
+              <h3 className="title-md text-primary" style={{ marginBottom: '1rem' }}>Foundational Health</h3>
               <p className="text-muted">
-                Mindfulness practices, deep relaxation, and pranayama strategies to reduce anxiety, combat stress, and foster a peaceful, resilient mind.
+                Sustainable weight management, improved energy, and lifestyle adjustments through dynamic yoga flows, nutrition awareness, and holistic well-being practices.
+              </p>
+            </div>
+
+            <div className="path-card card-hover glass animate-slide-up delay-400" style={{ padding: '2.5rem', textAlign: 'center', borderRadius: '1rem', border: '1px solid var(--border-color)' }}>
+              <div style={{ backgroundColor: '#10b981', width: '64px', height: '64px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: '#fff' }}>
+                <Scale size={32} />
+              </div>
+              <h3 className="title-md text-primary" style={{ marginBottom: '1rem' }}>PCOS & Women's Health</h3>
+              <p className="text-muted">
+                Targeted yoga protocols and lifestyle interventions designed to manage PCOS symptoms, support reproductive health, and promote overall women's wellness.
               </p>
             </div>
           </div>

@@ -29,7 +29,7 @@ const Header: React.FC = () => {
           <img src="/dyoga-logo.png" alt="D'YOGA Logo" style={{ height: '50px', width: 'auto' }} />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span style={{ ...styles.logo, color: '#2c494c', lineHeight: 1 }}>D'YOGA</span>
-            <span style={{ fontSize: '1.05rem', color: '#386c70', fontWeight: 600, letterSpacing: '0.5px', marginTop: '2px' }}>Corporate wellness solutions</span>
+            <span style={{ fontSize: '1.05rem', color: '#386c70', fontWeight: 600, letterSpacing: '0.5px', marginTop: '2px' }}>Corporate Wellness Solutions</span>
           </div>
         </Link>
         

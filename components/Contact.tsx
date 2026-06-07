@@ -3,7 +3,7 @@ import { User, Briefcase, MapPin, Phone, Mail, ExternalLink, ArrowRight } from '
 
 const Contact: React.FC = () => {
   const targetEmail = "info@dyogawellness.com";
-  const [selectedPrograms, setSelectedPrograms] = useState<string[]>(['Corporate Wellness']);
+  const [selectedPrograms, setSelectedPrograms] = useState<string[]>([]);
 
   const toggleProgram = (program: string) => {
     setSelectedPrograms(prev => 
