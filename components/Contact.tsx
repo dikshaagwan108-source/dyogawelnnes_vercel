@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
 
             <div style={styles.infoList}>
               <InfoItem icon={<User size={20} />} label="Contact" value="Diksha Agwan" />
-              <InfoItem icon={<Briefcase size={20} />} label="Designation" value={<>Corporate Yoga Instructor <br />& Wellness Strategist</>} />
+              <InfoItem icon={<Briefcase size={20} />} label="Designation" value="Corporate Wellness and Performance Coach" />
               <InfoItem icon={<MapPin size={20} />} label="Location" value="Wakad, Pune" />
               <InfoItem 
                 icon={<Phone size={20} />} 

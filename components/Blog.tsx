@@ -261,7 +261,7 @@ const Blog: React.FC = () => {
                         Wellness Blog
                     </h1>
                     <p style={{ color: 'var(--text-muted)', fontSize: '1.125rem', maxWidth: '800px', margin: '1rem auto 0', lineHeight: 1.6 }}>
-                        Explore our collection of articles on yoga, mindfulness, corporate wellness, and holistic health to help you thrive.
+                        Explore our collection of articles on yoga, mindfulness, corporate wellness and holistic health to help you thrive.
                     </p>
                 </div>
             </section>

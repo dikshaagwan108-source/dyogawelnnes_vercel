@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div style={{ gridColumn: 'span 1' }}>
           <h3 style={styles.logo}>D'YOGA</h3>
           <p style={styles.textMuted}>
-            Transforming corporate lives one breath at a time. Join the movement towards a healthier, happier workforce.
+            Transforming corporate lives one breath at a time. Join the movement towards a healthier and happier workforce.
           </p>
           <div style={styles.socialFlex}>
             <a href="https://www.instagram.com/dyoga.diksha?igsh=MWc4eHg1NWFtaXJjdA==" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}><Instagram size={20} /></a>

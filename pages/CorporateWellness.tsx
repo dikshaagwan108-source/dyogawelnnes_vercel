@@ -79,22 +79,21 @@ const CorporateWellness: React.FC = () => {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="animate-slide-up card-hover"
+                  className="animate-slide-up expertise-card card-shimmer"
                   style={{
                     animationDelay: item.delay,
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '0.75rem',
-                    padding: '1rem',
+                    gap: '1rem',
+                    padding: '1.25rem 1rem',
                     backgroundColor: '#fff',
                     borderRadius: '0.75rem',
                     boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
                     border: '1px solid #e0f0f0',
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                   }}
                 >
-                  <span style={{ fontSize: '1.5rem', flexShrink: 0 }}>{item.icon}</span>
-                  <span style={{ fontWeight: 600, color: 'var(--text-main)', fontSize: '0.95rem' }}>{item.text}</span>
+                  <span className="icon-glow hover-float" style={{ fontSize: '1.75rem', flexShrink: 0, padding: '0.25rem', borderRadius: '50%', backgroundColor: 'var(--bg-main)', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '3.5rem', height: '3.5rem' }}>{item.icon}</span>
+                  <span style={{ fontWeight: 600, color: 'var(--text-main)', fontSize: '0.95rem', lineHeight: '1.3' }}>{item.text}</span>
                 </div>
               ))}
             </div>

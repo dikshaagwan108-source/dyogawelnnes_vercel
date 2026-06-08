@@ -31,7 +31,7 @@ const Home: React.FC = () => {
             Elevate Your Well-Being
           </h1>
           <p className="title-md text-secondary" style={{ maxWidth: '800px', margin: '0 auto 3rem', fontWeight: 400 }}>
-            Empower yourself and your team to feel better, work better and live better with D'YOGA specialized programs.
+            Empowering individuals and organizations to unlock sustainable health, resilience, and peak performance through Corporate wellness and holistic health programs.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
             <a href="#choose-path" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.125rem' }}>
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
         <div className="container text-center">
           <h2 className="title-lg text-primary" style={{ marginBottom: '1rem' }}>Choose Your Path</h2>
           <p className="subtitle" style={{ marginBottom: '4rem', maxWidth: '600px', margin: '0 auto 4rem' }}>
-            Whether you are looking to transform your corporate environment, improve your personal health, or start your day right, we have a path for you.
+            Whether you're looking to elevate workplace wellness, improve your health, or create healthier daily habits, we have a path designed for you.
           </p>
 
           <div className="grid lg:grid-cols-3 gap-lg">

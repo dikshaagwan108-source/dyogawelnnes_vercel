@@ -7,7 +7,7 @@ const About: React.FC = () => {
         <div className="container">
           <h1 className="title-xl text-primary animate-slide-up">About D'YOGA</h1>
           <p className="title-md text-muted animate-slide-up delay-100" style={{ maxWidth: '800px', margin: '1rem auto 0' }}>
-            Meet Diksha Agwan, the visionary behind our holistic wellness approach.
+            Diksha Agwan, the visionary behind the holistic wellness approach.
           </p>
         </div>
       </section>
@@ -25,7 +25,7 @@ const About: React.FC = () => {
           <div className="animate-slide-up delay-200">
             <h3 className="title-md text-secondary" style={{ marginBottom: '1rem' }}>About D'YOGA</h3>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
-              D'YOGA was Founded to help people achieve lasting wellness by focusing on what's causing the problem, not just working on temporary relief.
+              D'YOGA was founded to help people achieve lasting wellness by focusing on what's causing the problem, not just working on temporary relief.
             </p>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
               Built on over 11 years of firsthand corporate experience, we understand the realities of modern work stress, burnout, sedentary lifestyles, weight challenges, hormonal imbalances and the struggle to prioritize health.
@@ -96,7 +96,7 @@ const About: React.FC = () => {
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1.25rem', fontSize: '1.05rem', color: '#e2ecec', lineHeight: 1.5 }}>
                 <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                   <span style={{ color: '#68a1a3', fontSize: '1.25rem', lineHeight: '1.3' }}>•</span>
-                  <span><strong style={{ color: '#ffffff' }}>Experience:</strong> 8+ years in health, 11+ years in IT</span>
+                  <span><strong style={{ color: '#ffffff' }}>Experience:</strong> 8+ years in health and 11+ years in IT</span>
                 </li>
                 <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                   <span style={{ color: '#68a1a3', fontSize: '1.25rem', lineHeight: '1.3' }}>•</span>
