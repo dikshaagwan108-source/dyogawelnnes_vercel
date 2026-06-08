@@ -7,7 +7,7 @@ const healthTestimonials: Testimonial[] = [
         name: "Program Member",
         role: "Weight Loss Journey",
         company: "D'YOGA Program",
-        text: "I struggled with stubborn weight for years. D'YOGA's tailored approach helped me lose 12 kgs sustainably without extreme diets. I feel lighter, stronger, and more energetic than ever.",
+        text: "I struggled with stubborn weight for years. D'YOGA tailored approach helped me lose 12 kgs sustainably without extreme diets. I feel lighter, stronger, and more energetic than ever.",
         rating: 5,
         image: "https://ui-avatars.com/api/?name=A&background=f59e0b&color=fff&size=128"
     },
@@ -29,7 +29,7 @@ const healthTestimonials: Testimonial[] = [
     },
     {
         name: "Program Member",
-        role: "Holistic Wellbeing",
+        role: "Holistic Well-being",
         company: "D'YOGA Program",
         text: "I came in feeling constantly fatigued and out of sync. This program didn't just change my body; it transformed my relationship with myself. I feel incredibly balanced and truly healthy from the inside out.",
         rating: 5,
@@ -44,7 +44,7 @@ const HealthProgram: React.FC = () => {
         <div className="container">
           <h1 className="title-xl text-primary animate-slide-up">Health Program</h1>
           <p className="title-md text-muted animate-slide-up delay-100" style={{ maxWidth: '800px', margin: '1rem auto 0' }}>
-            A holistic approach to personal health, focusing on mindfulness, physical strength, and mental clarity.
+            A holistic approach to personal health, focusing on mindfulness, physical strength and mental clarity.
           </p>
         </div>
       </section>
@@ -62,7 +62,7 @@ const HealthProgram: React.FC = () => {
           <div className="animate-slide-up delay-200">
             <h2 className="title-lg text-secondary" style={{ marginBottom: '1.5rem' }}>Transform Your Life</h2>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
-              Our comprehensive health program goes beyond standard yoga classes. We focus on breathing techniques, nutritional awareness, and mindfulness to bring your body and mind into perfect harmony.
+              Our comprehensive health program goes beyond standard yoga classes. We focus on breathing techniques, nutritional awareness and mindfulness to bring your body and mind into perfect harmony.
             </p>
             <ul style={styles.list}>
               <li>✓ Personalized Assessment</li>
@@ -75,41 +75,6 @@ const HealthProgram: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-card" style={{ padding: '2rem 0 3rem' }}>
-        <div className="container">
-          <div style={{ padding: '2rem', borderRadius: '1rem', background: 'linear-gradient(135deg, #e0f0f0 0%, #f4f9f9 100%)', border: '1px solid var(--border-color)' }}>
-            <h3 className="title-md text-primary animate-slide-up" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>What We Offer</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
-              {[
-                { icon: '🧠', text: 'Neuro-reset techniques to improve focus, energy, and resilience', delay: '0.1s' },
-                { icon: '🧘', text: 'Desk-based yoga movements requiring no special equipments', delay: '0.2s' },
-                { icon: '🦴', text: 'Posture correction and spine mobility practices', delay: '0.3s' },
-                { icon: '👁️', text: 'Ear-Eye relaxation techniques for mental fatigue', delay: '0.4s' },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="animate-slide-up card-hover"
-                  style={{
-                    animationDelay: item.delay,
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.75rem',
-                    padding: '1rem',
-                    backgroundColor: '#fff',
-                    borderRadius: '0.75rem',
-                    boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
-                    border: '1px solid #e0f0f0',
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                  }}
-                >
-                  <span style={{ fontSize: '1.5rem', flexShrink: 0 }}>{item.icon}</span>
-                  <span style={{ fontWeight: 600, color: 'var(--text-main)', fontSize: '0.95rem' }}>{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Niche Expertise Section */}
       <section className="section bg-main" style={{ padding: '5rem 0', borderBottom: '1px solid var(--border-color)' }}>

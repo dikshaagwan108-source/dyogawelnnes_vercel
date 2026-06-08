@@ -16,7 +16,7 @@ const MorningYoga: React.FC = () => {
         <div className="container">
           <h1 className="title-xl text-primary animate-slide-up">Morning Yoga</h1>
           <p className="title-md text-muted animate-slide-up delay-100" style={{ maxWidth: '800px', margin: '1rem auto 0' }}>
-            Awaken your body, center your mind, and set a positive intention for the day ahead.
+            Awaken your body, center your mind and set a positive intention for the day ahead.
           </p>
         </div>
       </section>

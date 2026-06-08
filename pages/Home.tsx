@@ -31,7 +31,7 @@ const Home: React.FC = () => {
             Elevate Your Well-Being
           </h1>
           <p className="title-md text-secondary" style={{ maxWidth: '800px', margin: '0 auto 3rem', fontWeight: 400 }}>
-            Empower yourself and your team to feel better, work better, and live better with D'YOGA's specialized programs.
+            Empower yourself and your team to feel better, work better and live better with D'YOGA specialized programs.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
             <a href="#choose-path" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.125rem' }}>
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
               <div style={styles.cardContent}>
                 <h3 className="title-md text-primary">Corporate Wellness</h3>
                 <p className="text-muted" style={{ marginTop: '1rem' }}>
-                  Boost employee productivity, reduce stress, and build a stronger team with our tailored corporate programs.
+                  Boost employee productivity, reduce stress and build a stronger team with our tailored corporate programs.
                 </p>
               </div>
             </Link>

@@ -25,16 +25,16 @@ const About: React.FC = () => {
           <div className="animate-slide-up delay-200">
             <h3 className="title-md text-secondary" style={{ marginBottom: '1rem' }}>About D'YOGA</h3>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
-              D'YOGA was created to help people achieve lasting wellness by focusing on what's causing the problem, not just the problem itself.
+              D'YOGA was Founded to help people achieve lasting wellness by focusing on what's causing the problem, not just working on temporary relief.
             </p>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
-              Built on over 11 years of firsthand corporate experience, we understand the realities of modern work stress, burnout, sedentary lifestyles, weight challenges, hormonal imbalances, and the struggle to prioritize health.
+              Built on over 11 years of firsthand corporate experience, we understand the realities of modern work stress, burnout, sedentary lifestyles, weight challenges, hormonal imbalances and the struggle to prioritize health.
             </p>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
-              Our approach combines holistic health coaching, yoga expertise, and practical lifestyle transformation to help busy professionals achieve <strong>Mental Rejuvenation</strong>, <strong>Foundational Health</strong>, <strong>Hormonal Equilibrium</strong> and <strong>Women's Wellbeing</strong>.
+              Our approach combines holistic health coaching, yoga expertise and practical lifestyle transformation to help busy professionals achieve <strong>Mental Rejuvenation</strong>, <strong>Foundational Health</strong>, <strong>Hormonal Equilibrium</strong> and <strong>Women's Well-being</strong>.
             </p>
             <p className="text-muted" style={{ marginBottom: '1rem' }}>
-              At D'YOGA, we don't just promote wellness, we help people build sustainable habits that support healthier, happier, and more productive lives.
+              At D'YOGA, we don't just promote wellness, we help people build sustainable habits that support healthier, happier and more productive lives.
             </p>
 
             <div style={{ marginTop: '2.5rem', padding: '2rem', borderRadius: '1rem', background: 'linear-gradient(135deg, #e0f0f0 0%, #f4f9f9 100%)', border: '1px solid var(--border-color)' }}>
@@ -100,7 +100,7 @@ const About: React.FC = () => {
                 </li>
                 <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                   <span style={{ color: '#68a1a3', fontSize: '1.25rem', lineHeight: '1.3' }}>•</span>
-                  <span><strong style={{ color: '#ffffff' }}>Certification:</strong> Certified health coach and wellbeing specialist</span>
+                  <span><strong style={{ color: '#ffffff' }}>Certification:</strong> Certified health coach and well-being specialist</span>
                 </li>
                 <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                   <span style={{ color: '#68a1a3', fontSize: '1.25rem', lineHeight: '1.3' }}>•</span>
