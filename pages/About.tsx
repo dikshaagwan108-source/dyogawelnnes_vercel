@@ -100,7 +100,7 @@ const About: React.FC = () => {
                 </li>
                 <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                   <span style={{ color: '#68a1a3', fontSize: '1.25rem', lineHeight: '1.3' }}>•</span>
-                  <span><strong style={{ color: '#ffffff' }}>Certification:</strong> Certified health coach and well-being specialist</span>
+                  <span><strong style={{ color: '#ffffff' }}>Certification:</strong> Certified health coach and well-being expert</span>
                 </li>
                 <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                   <span style={{ color: '#68a1a3', fontSize: '1.25rem', lineHeight: '1.3' }}>•</span>
